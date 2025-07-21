@@ -1,0 +1,1 @@
+describe('Save Pipeline Without Mandatory Fields', () => {\n  it('should display an error message when mandatory fields are missing', () => {\n    cy.login();\n    cy.visit('/pipeline/create');\n    cy.get('#saveButton').click();\n    cy.contains('Name and Description are required fields.').should('be.visible');\n  });\n});
